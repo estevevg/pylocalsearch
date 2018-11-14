@@ -35,10 +35,10 @@ def createNode(it, end):
     return n
 
 def createChildren(node, nchild, it, end):
-    if it >= end:
+    if end <= it:
         for i in range(nchild):
-            end = (it == end)
-            n = createNode(it, end)
+            fin = (it == end)
+            n = createNode(it, fin)
             nextIt = end+1
             createChildren(n, nchild, it, nextIt)
             node.addChildren(n)
@@ -48,17 +48,17 @@ def createChildren(node, nchild, it, end):
 
 def main():
     nchildren = 10
-    it = 1
+    it = 10
     nodes = ENodes()
-    for i in range(20):
+    for i in range(1):
         n = createNode(0, False)
         n = createChildren(n, nchildren, it, 0)
         nodes.addNode(n)
 
-    search = LocalSearch(nodes)
-    solution = search.initExperiment()
+    #search = LocalSearch(nodes)
+    #solution = search.initExperiment()
 
-    print(solution.key)
+    #print(solution.key)
 
 
 if __name__ == '__main__':
