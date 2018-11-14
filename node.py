@@ -13,7 +13,7 @@ class Node:
         self.children.append(child)
 
     def getChildren(self):
-        return children
+        return self.children
 
     def do(self):
         raise Exception("Needs to be implemented by user")

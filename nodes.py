@@ -13,5 +13,5 @@ class Nodes:
     def h(self, nodes):
         raise Exception("Not implemented")
 
-    def isVisited(self, node)
-        return (node.key in visited)
+    def isVisited(self, node):
+        return (node.key in self.visited)
